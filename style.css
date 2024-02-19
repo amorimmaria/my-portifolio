@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #0F1120;
+  background-color: #0f1120;
   height: 100vh;
 }
 
@@ -15,16 +15,20 @@ body {
   max-width: 1280px;
   margin: 0 auto;
 }
-.flex{
+.flex {
   display: flex;
+}
+
+button:hover {
+  box-shadow: 0px 0px 8px #62e1e9;
+  transform: scale(1.05);
 }
 
 /*Estilo do cabeçalho*/
 
 header {
-  padding: 0px 4%;
+  padding: 40px 4%;
 }
-
 
 header > .interface {
   display: flex;
@@ -38,8 +42,8 @@ header a {
   display: inline-block;
   transition: 0.2s;
 }
-header a:hover{
-  color: #FFFFFF;
+header a:hover {
+  color: #ffffff;
   transform: scale(1.05);
 }
 
@@ -56,39 +60,91 @@ header nav ul li {
   padding: 10px 40px;
   font-size: 18px;
   font-weight: 600;
-  background-color: #62E1E9;
+  background-color: #62e1e9;
   border: 0;
   border-radius: 30px;
   cursor: pointer;
-
+  transition: 0.2s;
 }
 
-header .btn-contato button:hover{
-  box-shadow: 0px 0px 8px #62E1E9;
-}
 
 /*Estilo topo do site*/
 section.topo-do-site {
   padding: 40px 2%;
-
 }
 
 section.topo-do-site .flex {
   align-items: center;
   justify-content: center;
   gap: 90px;
-  
 }
 
 .topo-do-site h1 {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 50px;
   line-height: 40px;
-
+}
+.topo-do-site span {
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 40px;
 }
 
 .topo-do-site .txt-topo-site p {
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 40px 0;
+}
 
+.topo-do-site .img-topo-site img {
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+@keyframes flutuar {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+/*Estilo do sobre*/
+section .about {
+  padding: 80px 4%;
+}
+
+section .flex {
+  align-items: center;
+  gap: 60px;
+}
+
+.about .txt-about {
+  color: #ffffff;
+}
+
+.about .txt-about h2 {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+.about .txt-about h2 span {
+  color: #62e1e9;
+}
+
+.about .txt-about p {
+  margin: 20px 0;
+  text-align: justify;
+}
+
+.about .txt-about .btn-social button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: #62e1e9;
+  font-size: 22px;
+  cursor: pointer;
+  margin: 0 4px;
+  transition: .2s;
 }
