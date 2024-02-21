@@ -119,6 +119,8 @@ section .flex {
   gap: 60px;
 }
 
+
+
 .about .txt-about {
   color: #ffffff;
 }
@@ -147,4 +149,109 @@ section .flex {
   cursor: pointer;
   margin: 0 4px;
   transition: .2s;
+}
+
+/* Estilo da seção Skills */
+section.Skills {
+  background-color: #0f1120;
+  padding: 80px 4%;
+}
+
+section.Skills h2 {
+  padding: 60px 4%;
+  color: #62e1e9;
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+
+section.Skills .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skills-box {
+  background-color: #1e2133;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.skills-box:hover {
+  transform: translateY(-5px);
+}
+
+.skills-box i {
+  color: #62e1e9;
+  font-size: 36px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.skills-box span {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+section h2 {
+  color: #62e1e9;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+/*Estilo do project*/
+
+section.projects {
+  padding: 88px 4%;
+  box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+section.projects .flex {
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.img-proj {
+  width: 360px;
+  height: 460px;
+  background-size: cover;
+  background-position: 100% 0;
+  transition: 8s;
+  cursor: pointer;
+  border-radius: 40px;
+  position: relative;
+
+}
+
+.img-proj:hover{
+
+  background-position: 0 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: #000000b8;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+
+}
+
+.overlay:hover {
+  opacity: 1;
 }
