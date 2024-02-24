@@ -19,7 +19,8 @@ body {
   display: flex;
 }
 
-button:hover {
+button:hover,
+form .btn-env input:hover {
   box-shadow: 0px 0px 8px #62e1e9;
   transform: scale(1.05);
 }
@@ -66,7 +67,6 @@ header nav ul li {
   cursor: pointer;
   transition: 0.2s;
 }
-
 
 /*Estilo topo do site*/
 section.topo-do-site {
@@ -119,8 +119,6 @@ section .flex {
   gap: 60px;
 }
 
-
-
 .about .txt-about {
   color: #ffffff;
 }
@@ -139,7 +137,7 @@ section .flex {
   text-align: justify;
 }
 
-.about .txt-about .btn-social button {
+.btn-social button {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -148,24 +146,24 @@ section .flex {
   font-size: 22px;
   cursor: pointer;
   margin: 0 4px;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 /* Estilo da seção Skills */
-section.Skills {
+section.skills {
   background-color: #0f1120;
-  padding: 80px 4%;
+  padding: 40px 4%;
 }
 
-section.Skills h2 {
-  padding: 60px 4%;
+section.skills h2 {
+  padding: 40px 4%;
   color: #62e1e9;
   font-size: 40px;
   line-height: 40px;
   margin-bottom: 30px;
 }
 
-section.Skills .flex {
+section.skills .flex {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -225,11 +223,9 @@ section.projects .flex {
   cursor: pointer;
   border-radius: 40px;
   position: relative;
-
 }
 
-.img-proj:hover{
-
+.img-proj:hover {
   background-position: 0 100%;
 }
 
@@ -248,10 +244,83 @@ section.projects .flex {
   background-color: #000000b8;
   color: #fff;
   opacity: 0;
-  transition: .5s;
-
+  transition: 0.5s;
 }
 
 .overlay:hover {
   opacity: 1;
+}
+
+/*Estilo do formulario*/
+
+section.formulario {
+  padding: 80px 4%;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  background-color: #242424;
+  border: 0;
+  outline: 0;
+  padding: 20px 15px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 18px;
+}
+
+form textarea {
+  resize: none;
+  max-height: 200px;
+}
+
+form .btn-env {
+  margin-top: 20px;
+  text-align: center;
+}
+
+form .btn-env input {
+  width: 120px;
+  background-color: #62e1e9;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Estilo rodapé*/
+
+footer {
+  padding: 40px 4%;
+  box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex {
+  justify-content: space-between;
+}
+
+footer .line-footer {
+  padding: 20px 0;
+}
+
+.borda {
+  border-top: 2px solid #62e1e9;
+}
+footer .line-footer p i {
+  color: #62e1e9;
+  font-size: 22px;
+}
+
+footer .line-footer p a {
+  color: #fff;
 }
