@@ -19,6 +19,17 @@ body {
   display: flex;
 }
 
+.btn-contato button {
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #62e1e9;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
 button:hover,
 form .btn-env input:hover {
   box-shadow: 0px 0px 8px #62e1e9;
@@ -43,7 +54,7 @@ header a {
   display: inline-block;
   transition: 0.2s;
 }
-header a:hover {
+header nav.menu-desktop a:hover {
   color: #ffffff;
   transform: scale(1.05);
 }
@@ -52,20 +63,76 @@ header nav ul {
   list-style: none;
 }
 
-header nav ul li {
+header nav.menu-desktop ul li {
   display: inline-block;
   padding: 0 40px;
 }
 
-.btn-contato button {
-  padding: 10px 40px;
-  font-size: 18px;
-  font-weight: 600;
+/* Estilo menu mobile*/
+.btn-abrir-menu i {
+  color: #62e1e9;
+  font-size: 40px;
+}
+
+.btn-abrir-menu {
+  display: none;
+}
+
+.menu-mobile {
+  background-color: #000;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  width: 0%;
+  overflow: hidden;
+  transition: .2s;
+}
+
+.menu-mobile.abrir-menu{
+  width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+  display: block;
+}
+
+.menu-mobile .btn-fechar {
+  padding: 20px 6%;
+}
+
+.menu-mobile .btn-fechar i {
+  color: #62e1e9;
+  font-size: 30px;
+}
+
+.menu-mobile nav {
+  text-align: right;
+}
+
+.menu-mobile nav ul li a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 20px 8%;
+  display: block;
+}
+
+.menu-mobile nav ul li a:hover {
   background-color: #62e1e9;
-  border: 0;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.2s;
+  color: #000;
+}
+
+.overlay-menu {
+  background-color: #000000a7;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 88888;
+  display: none;
 }
 
 /*Estilo topo do site*/
@@ -84,6 +151,7 @@ section.topo-do-site .flex {
   font-size: 50px;
   line-height: 40px;
 }
+
 .topo-do-site span {
   color: #ffffff;
   font-size: 50px;
@@ -100,6 +168,7 @@ section.topo-do-site .flex {
   position: relative;
   animation: flutuar 2s ease-in-out infinite alternate;
 }
+
 @keyframes flutuar {
   0% {
     top: 0;
@@ -128,6 +197,7 @@ section .flex {
   line-height: 40px;
   margin-bottom: 30px;
 }
+
 .about .txt-about h2 span {
   color: #62e1e9;
 }
@@ -323,4 +393,97 @@ footer .line-footer p i {
 
 footer .line-footer p a {
   color: #fff;
+}
+
+@media screen and (max-width: 1020px) {
+  /*Classes gerais*/
+  .flex {
+    flex-direction: column;
+  }
+
+  .topo-do-site .flex {
+    flex-direction: column-reverse;
+  }
+
+  /*Cabeçalho*/
+
+  .menu-desktop,
+  .btn-contato {
+    display: none;
+  }
+
+  /*Topo do site*/
+
+  section.topo-do-site .flex {
+    gap: 40px;
+  }
+
+  section.topo-do-site {
+    padding: 20px 8%;
+  }
+
+  .topo-do-site h1 {
+    font-size: 30px;
+  }
+
+  .topo-do-site .img-topo-site img {
+    width: 100%;
+  }
+
+  /*Skills*/
+  section.skills {
+    padding: 40px;
+  }
+
+  section.skills h2 {
+    color: #62e1e9;
+    font-size: 40px;
+  }
+
+  /*Sobre*/
+  section.about {
+    padding: 40px 8%;
+  }
+
+  .about .txt-about h2 {
+    font-size: 34px;
+    line-height: 35px;
+    text-align: center;
+  }
+
+  .btn-social {
+    text-align: center;
+  }
+
+  .img-about img {
+    width: 100%;
+  }
+
+  /* Projects */
+
+  section.project {
+    padding: 80px 8%;
+  }
+
+  .img-proj {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  section.projects.flex {
+    gap: 60px;
+  }
+
+  footer .flex {
+    flex-direction: column;
+  }
+
+  footer .line-footer {
+    text-align: center;
+  }
+
+  .btn-abrir-menu {
+    display: block;
+  }
 }
